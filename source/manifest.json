@@ -1,0 +1,35 @@
+{
+    "name": "Extensão dos Dicky Vigarista",
+    "version": "1.0",
+    "description": "Build an Extension!",
+    "manifest_version": 2,
+    "icons": {
+        "16": "img/img16.png",
+        "32": "img/img32.png",
+        "48": "img/img48.png",
+        "128": "img/img128.png"
+    },
+    "background": {
+        "scripts": [
+            "js/libs/jquery.min.js",
+            "js/background.js"
+        ],
+        "persistent": false
+    },
+    "content_scripts": [{
+        "js": ["js/libs/jquery.min.js", "js/scripts.js"],
+        "matches": ["<all_urls>"]
+    }],
+    "page_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "img/img16.png",
+            "32": "img/img32.png",
+            "48": "img/img48.png",
+            "128": "img/img128.png"
+        }
+    },
+    "permissions": [
+        "tabs"
+    ]
+}
